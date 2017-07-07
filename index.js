@@ -12,7 +12,7 @@ const shoutMessage = require('shout-message')
 const cli = meow(
   `
   Usage:
-    $ npmstat <npm username>      get npm stats
+    $ npmstat <npm username>    get npm stats
 
   Example:
     $ npmstat bukinoshita
