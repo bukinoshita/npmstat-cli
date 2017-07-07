@@ -1,6 +1,6 @@
 {
   "name": "npmstat-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "npm packages downloads stats",
   "main": "index.js",
   "repository": "git@github.com:bukinoshita/npmstat-cli.git",
@@ -9,7 +9,13 @@
   "scripts": {
     "test": "xo"
   },
-  "keywords": ["npm", "package", "downloads", "stat", "stats"],
+  "keywords": [
+    "npm",
+    "package",
+    "downloads",
+    "stat",
+    "stats"
+  ],
   "bin": {
     "npmstat": "index.js"
   },
