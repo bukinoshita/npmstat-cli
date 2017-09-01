@@ -16,17 +16,28 @@ $ npm install -g npmstat-cli
 $ npmstat --help
 
   Usage:
-    $ npmstat <npm username>      get npm stats
+    $ npmstat <package name>      get download count of this module
+    $ npmstat <username> -u       get user npm information
+    $ npmstat <package name> -p   get package npm information
 
   Example:
-    $ npmstat bukinoshita
-    $ npmstat --count=100
+    $ npmstat react-cookies
+    $ npmstat react-cookies -r=last-week
+    $ npmstat react-cookies -r=2017-07-01
+    $ npmstat bukinoshita -u
+    $ npmstat react-cookies -p
 
   Options:
-    -c COUNT, --count=COUNT     Choose branch as default
-    -h, --help                  Show help options
-    -v, --version               Show version
+    -r RANGE, --range=RANGE       choose range
+    -u, --user                    get user npm information
+    -p, --pkg                     get package npm information
+    -h, --help                    show help options
+    -v, --version                 show version
 ```
+
+## Demo
+
+<img src="demo.png" alt="">
 
 
 ## Related
