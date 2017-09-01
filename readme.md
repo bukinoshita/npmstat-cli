@@ -37,7 +37,7 @@ $ npmstat --help
 
 ## Demo
 
-<img src="demo.png" alt="">
+<img src="demo.png" alt="demo" width="700px">
 
 
 ## Related
