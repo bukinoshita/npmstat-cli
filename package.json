@@ -1,6 +1,6 @@
 {
   "name": "npmstat-cli",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "npm packages downloads stats",
   "main": "index.js",
   "repository": "git@github.com:bukinoshita/npmstat-cli.git",
