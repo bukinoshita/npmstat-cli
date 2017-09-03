@@ -13,9 +13,9 @@ const sortArr = require('sort-arr')
 const cli = meow(
   `
   Usage:
-    $ npmstat <package name>      get download count of this module
-    $ npmstat <username> -u       get user npm information
-    $ npmstat <package name> -p   get package npm information
+    $ npmstat <package name>                get download count of this module
+    $ npmstat <username> -u                 get user npm information
+    $ npmstat <package name> -p             get package npm information
 
   Example:
     $ npmstat react-cookies
@@ -25,11 +25,11 @@ const cli = meow(
     $ npmstat react-cookies -p
 
   Options:
-    -r RANGE, --range=RANGE       choose range
-    -u, --user                    get user npm information
-    -p, --pkg                     get package npm information
-    -h, --help                    show help options
-    -v, --version                 show version
+    -r RANGE, --range=RANGE                 choose range
+    -u, --user                              get user npm information
+    -p, --pkg                               get package npm information
+    -h, --help                              show help options
+    -v, --version                           show version
 `,
   {
     alias: {
@@ -48,6 +48,11 @@ const run = () => {
   const input = cli.input[0]
   const { user, pkg, range = 'last-month' } = cli.flags
   const spinner = ora('Loading packages...')
+
+  if (!input) {
+    return cli.showHelp()
+  }
+
   spinner.start()
 
   if (user) {
