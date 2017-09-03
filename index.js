@@ -51,18 +51,20 @@ const run = () => {
   spinner.start()
 
   if (user) {
-    return getPackages(input).then(res => {
+    return getPackages(input).then(({ total, results }) => {
       spinner.stop()
-      const arr = sortArr(res, 'name')
+
+      const arr = sortArr(results, 'name')
 
       shoutSuccess(
-        `${chalk.bold(input)} has ${chalk.bold(res.length)} npm packages.\n`
+        `${chalk.bold(input)} has ${chalk.bold(total)} npm packages.\n`
       )
 
       arr.map(p => {
         console.log(
-          `${chalk.bold(p.name)} @${p.version}\n${p.description}\n${p.links
-            .repository || p.links.npm}\n`
+          `${chalk.bold(p.package.name)} @${p.package.version}\n${p.package
+            .description}\n${p.package.links.repository ||
+            p.package.links.npm}\n`
         )
       })
     })
